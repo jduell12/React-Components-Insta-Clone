@@ -3,13 +3,17 @@
 import React from "react";
 import Post from "./Post";
 import "./Posts.css";
-// import data 
 
-const PostsPage = () => {
-  // set up state for your data
+const PostsPage = (props) => {
+  const{usersData} = props
+
   return (
+    
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
+      {usersData.map(user => {
+        return <Post key={user.username} post = {user}/>
+      })}
     </div>
   );
 };

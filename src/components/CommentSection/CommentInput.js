@@ -3,13 +3,12 @@ import React from 'react';
 
 const CommentInput = props => {
   return (
-    <form className="comment-form" onSubmit={props.submitComment}>
+    <form className="comment-form">
       <input
         type="text"
-        value={props.comment}
         placeholder="Add comment... "
-        onChange={props.changeComment}
       />
+      <button>Submit</button>
     </form>
   );
 };
